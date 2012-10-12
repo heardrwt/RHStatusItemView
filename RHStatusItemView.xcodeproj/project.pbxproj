@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		131B4EC11627AD6D00CCF430 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131B4EC01627AD6D00CCF430 /* Cocoa.framework */; };
+		131B4ECB1627AD6D00CCF430 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 131B4EC91627AD6D00CCF430 /* InfoPlist.strings */; };
+		131B4ECF1627AD6D00CCF430 /* RHStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 131B4ECE1627AD6D00CCF430 /* RHStatusItemView.m */; };
+		1326E37816675C3B005B099F /* RHStatusItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 131B4ECD1627AD6D00CCF430 /* RHStatusItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		131B4EBD1627AD6D00CCF430 /* RHStatusItemView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RHStatusItemView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		131B4EC01627AD6D00CCF430 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		131B4EC31627AD6D00CCF430 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		131B4EC41627AD6D00CCF430 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		131B4EC51627AD6D00CCF430 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		131B4EC81627AD6D00CCF430 /* RHStatusItemView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RHStatusItemView-Info.plist"; sourceTree = "<group>"; };
+		131B4ECA1627AD6D00CCF430 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		131B4ECC1627AD6D00CCF430 /* RHStatusItemView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RHStatusItemView-Prefix.pch"; sourceTree = "<group>"; };
+		131B4ECD1627AD6D00CCF430 /* RHStatusItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHStatusItemView.h; sourceTree = "<group>"; };
+		131B4ECE1627AD6D00CCF430 /* RHStatusItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHStatusItemView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		131B4EB91627AD6D00CCF430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B4EC11627AD6D00CCF430 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		131B4EB11627AD6D00CCF430 = {
+			isa = PBXGroup;
+			children = (
+				131B4EC61627AD6D00CCF430 /* RHStatusItemView */,
+				131B4EBF1627AD6D00CCF430 /* Frameworks */,
+				131B4EBE1627AD6D00CCF430 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		131B4EBE1627AD6D00CCF430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				131B4EBD1627AD6D00CCF430 /* RHStatusItemView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		131B4EBF1627AD6D00CCF430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				131B4EC01627AD6D00CCF430 /* Cocoa.framework */,
+				131B4EC21627AD6D00CCF430 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		131B4EC21627AD6D00CCF430 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				131B4EC31627AD6D00CCF430 /* AppKit.framework */,
+				131B4EC41627AD6D00CCF430 /* CoreData.framework */,
+				131B4EC51627AD6D00CCF430 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		131B4EC61627AD6D00CCF430 /* RHStatusItemView */ = {
+			isa = PBXGroup;
+			children = (
+				131B4ECD1627AD6D00CCF430 /* RHStatusItemView.h */,
+				131B4ECE1627AD6D00CCF430 /* RHStatusItemView.m */,
+				131B4EC71627AD6D00CCF430 /* Supporting Files */,
+			);
+			path = RHStatusItemView;
+			sourceTree = "<group>";
+		};
+		131B4EC71627AD6D00CCF430 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				131B4EC81627AD6D00CCF430 /* RHStatusItemView-Info.plist */,
+				131B4EC91627AD6D00CCF430 /* InfoPlist.strings */,
+				131B4ECC1627AD6D00CCF430 /* RHStatusItemView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		131B4EBA1627AD6D00CCF430 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1326E37816675C3B005B099F /* RHStatusItemView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		131B4EBC1627AD6D00CCF430 /* RHStatusItemView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131B4ED21627AD6D00CCF430 /* Build configuration list for PBXNativeTarget "RHStatusItemView" */;
+			buildPhases = (
+				131B4EB81627AD6D00CCF430 /* Sources */,
+				131B4EB91627AD6D00CCF430 /* Frameworks */,
+				131B4EBA1627AD6D00CCF430 /* Headers */,
+				131B4EBB1627AD6D00CCF430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHStatusItemView;
+			productName = RHStatusItemView;
+			productReference = 131B4EBD1627AD6D00CCF430 /* RHStatusItemView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		131B4EB31627AD6D00CCF430 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Richard Heard";
+			};
+			buildConfigurationList = 131B4EB61627AD6D00CCF430 /* Build configuration list for PBXProject "RHStatusItemView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 131B4EB11627AD6D00CCF430;
+			productRefGroup = 131B4EBE1627AD6D00CCF430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				131B4EBC1627AD6D00CCF430 /* RHStatusItemView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		131B4EBB1627AD6D00CCF430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B4ECB1627AD6D00CCF430 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		131B4EB81627AD6D00CCF430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131B4ECF1627AD6D00CCF430 /* RHStatusItemView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		131B4EC91627AD6D00CCF430 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				131B4ECA1627AD6D00CCF430 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		131B4ED01627AD6D00CCF430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		131B4ED11627AD6D00CCF430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		131B4ED31627AD6D00CCF430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHStatusItemView/RHStatusItemView-Prefix.pch";
+				INFOPLIST_FILE = "RHStatusItemView/RHStatusItemView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		131B4ED41627AD6D00CCF430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RHStatusItemView/RHStatusItemView-Prefix.pch";
+				INFOPLIST_FILE = "RHStatusItemView/RHStatusItemView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		131B4EB61627AD6D00CCF430 /* Build configuration list for PBXProject "RHStatusItemView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131B4ED01627AD6D00CCF430 /* Debug */,
+				131B4ED11627AD6D00CCF430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		131B4ED21627AD6D00CCF430 /* Build configuration list for PBXNativeTarget "RHStatusItemView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131B4ED31627AD6D00CCF430 /* Debug */,
+				131B4ED41627AD6D00CCF430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 131B4EB31627AD6D00CCF430 /* Project object */;
+}
