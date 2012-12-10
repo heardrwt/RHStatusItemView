@@ -87,6 +87,23 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
     _statusItem = statusItem;
 }
 
+-(void)setImage:(NSImage *)image{
+    if (image != _image){
+        [_image release];
+        _image = [image retain];
+    }
+    
+    [self setNeedsDisplay];
+}
+
+-(void)setAlternateImage:(NSImage *)alternateImage{
+    if (alternateImage != _alternateImage){
+        [_alternateImage release];
+        _alternateImage = [alternateImage retain];
+    }
+    
+    [self setNeedsDisplay];
+}
 
 #pragma mark - NSView
 - (void)drawRect:(NSRect)rect {
