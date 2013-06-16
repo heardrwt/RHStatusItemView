@@ -115,10 +115,11 @@
     NSImage *image = self.image;
     if (highlighted && self.alternateImage)
         image = self.alternateImage;
-    
-    [image drawInRect:self.bounds fromRect:CGRectMake(image.size.width / 2 - self.bounds.size.width / 2,
-                                                      image.size.height / 2 - self.bounds.size.height / 2,
-                                                      self.bounds.size.width, self.bounds.size.height)
+
+    [image drawInRect:self.bounds fromRect:NSRectFromCGRect(
+            CGRectMake( image.size.width / 2 - self.bounds.size.width / 2,
+                    image.size.height / 2 - self.bounds.size.height / 2,
+                    self.bounds.size.width, self.bounds.size.height ) )
             operation:NSCompositeSourceOver fraction:1];
 }
 
