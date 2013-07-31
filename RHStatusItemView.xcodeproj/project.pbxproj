@@ -132,7 +132,7 @@
 		131B4EB31627AD6D00CCF430 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Richard Heard";
 			};
 			buildConfigurationList = 131B4EB61627AD6D00CCF430 /* Build configuration list for PBXProject "RHStatusItemView" */;
