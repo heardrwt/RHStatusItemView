@@ -62,34 +62,26 @@
 - (void)dealloc{
     _statusItem = nil;
 
-	[_image release]; _image = nil;
-	[_alternateImage release]; _alternateImage = nil;
 	
-    [_target release]; _target = nil;
 	
     _action = NULL;
 	_rightAction = NULL;
     
-	[_menu release]; _menu = nil;
-	[_rightMenu release]; _rightMenu = nil;
     
-	[super dealloc];
 }
 
 
 #pragma mark - properties
 -(void)setStatusItem:(NSStatusItem *)statusItem{
     if (!statusItem) [NSException raise:NSInvalidArgumentException format:@"-[%@ %@] statusItem should not be nil!", NSStringFromClass(self.class), NSStringFromSelector(_cmd)];
-    [_statusItem release];
-    _statusItem = [statusItem retain];
+    _statusItem = statusItem;
     _statusItem.highlightMode = YES;
     _statusItem.view = self;
 }
 
 -(void)setImage:(NSImage *)image{
     if (image != _image){
-        [_image release];
-        _image = [image retain];
+        _image = image;
     }
     
     [self setNeedsDisplay];
@@ -97,8 +89,7 @@
 
 -(void)setAlternateImage:(NSImage *)alternateImage{
     if (alternateImage != _alternateImage){
-        [_alternateImage release];
-        _alternateImage = [alternateImage retain];
+        _alternateImage = alternateImage;
     }
     
     [self setNeedsDisplay];
