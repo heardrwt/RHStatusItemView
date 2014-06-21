@@ -37,8 +37,6 @@
     NSImage *_image;
     NSImage *_alternateImage;
     
-    id _target;
-    SEL _action;
     SEL _rightAction;
     
     NSMenu *_menu;
@@ -53,9 +51,11 @@
 @property (nonatomic, retain) NSImage *image;
 @property (nonatomic, retain) NSImage *alternateImage; 
 
-@property (nonatomic, retain) id target;
-@property (nonatomic, assign) SEL action;       //if no action specified, we will try and pop up menu if set.
-@property (nonatomic, assign) SEL rightAction;  //if no rightAction specified, we will try and pop up, in order rightMenu, menu.
+// NSControl provides these for us
+//@property (weak) id target;
+//@property SEL action;       //if no action specified, we will try and pop up menu if set.
+
+@property SEL rightAction;  //if no rightAction specified, we will try and pop up, in order rightMenu, menu.
 
 @property (nonatomic, retain) NSMenu *menu;
 @property (nonatomic, retain) NSMenu *rightMenu;
