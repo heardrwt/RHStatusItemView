@@ -46,19 +46,18 @@
     BOOL _isMenuVisible;
 }
 
-@property (nonatomic, assign) NSStatusItem *statusItem; //should never be nil
+@property (nonatomic) NSStatusItem *statusItem; //should never be nil
 
-@property (nonatomic, retain) NSImage *image;
-@property (nonatomic, retain) NSImage *alternateImage; 
+@property (nonatomic, strong) NSImage *image;
+@property (nonatomic, strong) NSImage *alternateImage; 
 
 // NSControl provides these for us
 //@property (weak) id target;
 //@property SEL action;       //if no action specified, we will try and pop up menu if set.
-
 @property SEL rightAction;  //if no rightAction specified, we will try and pop up, in order rightMenu, menu.
 
-@property (nonatomic, retain) NSMenu *menu;
-@property (nonatomic, retain) NSMenu *rightMenu;
+@property (nonatomic, strong) NSMenu *menu;
+@property (nonatomic, strong) NSMenu *rightMenu;
 
 -(id)initWithStatusBarItem:(NSStatusItem*)statusItem; //designated initializer
 
