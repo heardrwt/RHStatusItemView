@@ -36,8 +36,6 @@
 @synthesize image=_image;
 @synthesize alternateImage=_alternateImage;
 
-@synthesize target=_target;
-@synthesize action=_action;
 @synthesize rightAction=_rightAction;
 
 @synthesize menu=_menu;
@@ -64,10 +62,7 @@
 
 	[_image release]; _image = nil;
 	[_alternateImage release]; _alternateImage = nil;
-	
-    [_target release]; _target = nil;
-	
-    _action = NULL;
+		
 	_rightAction = NULL;
     
 	[_menu release]; _menu = nil;
