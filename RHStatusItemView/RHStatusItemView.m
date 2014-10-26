@@ -37,8 +37,6 @@
 @synthesize alternateImage=_alternateImage;
 
 @synthesize rightAction=_rightAction;
-
-@synthesize menu=_menu;
 @synthesize rightMenu=_rightMenu;
 
 

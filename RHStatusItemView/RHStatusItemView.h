@@ -54,9 +54,8 @@
 // NSControl provides these for us
 //@property (weak) id target;
 //@property SEL action;       //if no action specified, we will try and pop up menu if set.
-@property SEL rightAction;  //if no rightAction specified, we will try and pop up, in order rightMenu, menu.
-
-@property (nonatomic, strong) NSMenu *menu;
+//@property (strong) NSMenu *menu;
+@property (nonatomic) SEL rightAction;  //if no rightAction specified, we will try and pop up, in order rightMenu, menu.
 @property (nonatomic, strong) NSMenu *rightMenu;
 
 -(id)initWithStatusBarItem:(NSStatusItem*)statusItem; //designated initializer
