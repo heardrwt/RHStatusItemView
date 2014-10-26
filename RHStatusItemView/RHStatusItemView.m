@@ -27,10 +27,6 @@
 //  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-static CGFloat RHStatusItemViewImageHPadding = 4.0f;
-static CGFloat RHStatusItemViewImageVPadding = 3.0f;
-
-
 #import "RHStatusItemView.h"
 
 @implementation RHStatusItemView
@@ -41,8 +37,6 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
 @synthesize alternateImage=_alternateImage;
 
 @synthesize rightAction=_rightAction;
-
-@synthesize menu=_menu;
 @synthesize rightMenu=_rightMenu;
 
 
@@ -64,15 +58,9 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
 - (void)dealloc{
     _statusItem = nil;
 
-	[_image release]; _image = nil;
-	[_alternateImage release]; _alternateImage = nil;
-		
 	_rightAction = NULL;
     
-	[_menu release]; _menu = nil;
-	[_rightMenu release]; _rightMenu = nil;
     
-	[super dealloc];
 }
 
 
@@ -80,12 +68,13 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
 -(void)setStatusItem:(NSStatusItem *)statusItem{
     if (!statusItem) [NSException raise:NSInvalidArgumentException format:@"-[%@ %@] statusItem should not be nil!", NSStringFromClass(self.class), NSStringFromSelector(_cmd)];
     _statusItem = statusItem;
+    _statusItem.highlightMode = YES;
+    _statusItem.view = self;
 }
 
 -(void)setImage:(NSImage *)image{
     if (image != _image){
-        [_image release];
-        _image = [image retain];
+        _image = image;
     }
     
     [self setNeedsDisplay];
@@ -93,8 +82,7 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
 
 -(void)setAlternateImage:(NSImage *)alternateImage{
     if (alternateImage != _alternateImage){
-        [_alternateImage release];
-        _alternateImage = [alternateImage retain];
+        _alternateImage = alternateImage;
     }
     
     [self setNeedsDisplay];
@@ -108,14 +96,15 @@ static CGFloat RHStatusItemViewImageVPadding = 3.0f;
     // Draw status bar background, highlighted if menu is showing
     [_statusItem drawStatusBarBackgroundInRect:[self bounds] withHighlight:highlighted];
 
-    NSRect imageRect = NSInsetRect(self.bounds, RHStatusItemViewImageHPadding, RHStatusItemViewImageVPadding);
-    imageRect.origin.y++; //move it up one pix
-    
-    if (highlighted){
-        [self.alternateImage drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-    } else {
-        [self.image drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-    }
+    NSImage *image = self.image;
+    if (highlighted && self.alternateImage)
+        image = self.alternateImage;
+
+    [image drawInRect:self.bounds fromRect:NSRectFromCGRect(
+            CGRectMake( image.size.width / 2 - self.bounds.size.width / 2,
+                    image.size.height / 2 - self.bounds.size.height / 2,
+                    self.bounds.size.width, self.bounds.size.height ) )
+            operation:NSCompositeSourceOver fraction:1];
 }
 
 
