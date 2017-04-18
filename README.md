@@ -4,7 +4,7 @@ An NSStatusItem hosted view that supports handling both left and right click act
 
 ## Usage Example
 <pre>
-#import "RHStatusItemView.h"
+# import "RHStatusItemView.h"
 
 @property (retain) IBOutlet NSMenu *statusMenu; //Created in MainMenu.nib 
 
